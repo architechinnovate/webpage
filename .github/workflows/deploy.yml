@@ -24,10 +24,13 @@ jobs:
 
       - name: Build
         run: npm run build
+      
+      - name: Add SPA fallback
+        run: cp dist/index.html dist/404.html
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: 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
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist   # change to ./dist if your build outputs to dist
 
