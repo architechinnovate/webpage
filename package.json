@@ -10,8 +10,9 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build && cp dist/index.html dist/404.html && echo architechinnovate.com > dist/CNAME",
-    "deploy": "gh-pages -d dist"
+    "clean": "rm -rf .vite dist",
+    "predeploy": "npm run clean && npm run build && cp dist/index.html dist/404.html && echo architechinnovate.com > dist/CNAME",
+    "deploy": "gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

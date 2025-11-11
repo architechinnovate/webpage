@@ -134,7 +134,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Website</h4>
-                    <p className="text-muted-foreground group-hover:text-primary transition-colors">architechinnovate.wixsite.com</p>
+                    <p className="text-muted-foreground group-hover:text-primary transition-colors">architechinnovate.com</p>
                   </div>
                 </a>
               </div>
