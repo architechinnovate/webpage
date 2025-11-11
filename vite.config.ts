@@ -7,6 +7,8 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   base:'/',
   build: {
+    outDir: '.', // 👈 output directly into repo root
+    emptyOutDir: false, // avoid deleting config files
     sourcemap: true, // 👈 add this
   },
   // server: {
