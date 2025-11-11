@@ -124,7 +124,7 @@ const Contact = () => {
                 </a>
 
                 <a 
-                  href="https://architechinnovate.wixsite.com/architech-innovate" 
+                  href="https://architechinnovate.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 hover:opacity-80 transition-opacity group"
