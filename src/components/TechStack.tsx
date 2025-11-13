@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Helmet } from "react-helmet-async";
 
 const techCategories = [
   {
@@ -41,6 +42,37 @@ const techCategories = [
 const TechStack = () => {
   return (
     <section id="tech-stack" className="py-24 bg-section-bg">
+
+      {/* tags and keywords for seo */}
+
+
+      <Helmet>
+        <title>Tech Stack | ArchiTech Innovate</title>
+        <meta
+          name="description"
+          content="Explore the robust tech stack at ArchiTech Innovate — from Go, Node.js, and Python to React, AWS, and blockchain frameworks. We use cutting-edge tools to deliver scalable digital solutions."
+        />
+        <meta
+          name="keywords"
+          content="technology stack, MERN stack, GoLang, Node.js, Python, AWS, blockchain development, cloud architecture, ArchiTech Innovate tech stack"
+        />
+        <meta property="og:title" content="Tech Stack | ArchiTech Innovate" />
+        <meta
+          property="og:description"
+          content="Discover the core technologies powering ArchiTech Innovate — from backend and cloud to frontend and smart contract frameworks."
+        />
+        <meta property="og:url" content="https://architechinnovate.com/#tech-stack" />
+        <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tech Stack | ArchiTech Innovate" />
+        <meta
+          name="twitter:description"
+          content="Our versatile tech stack includes Go, Node.js, Python, React, and modern DevOps tools to craft robust and scalable solutions."
+        />
+        <meta name="twitter:image" content="https://architechinnovate.com/og-image.png" />
+      </Helmet>
+
+      
       <div className="section-container">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">

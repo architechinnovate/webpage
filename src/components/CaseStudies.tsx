@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 interface CaseStudy {
   id: number;
@@ -76,6 +77,28 @@ const CaseStudies = () => {
 
   return (
     <section id="case-studies" className="py-20 bg-section-bg">
+
+      {/* tags and keywords for seo */}
+
+      <Helmet>
+        <title>Case Studies | ArchiTech Innovate</title>
+        <meta
+          name="description"
+          content="Explore ArchiTech Innovate’s success stories in blockchain, web apps, and AI-driven platforms that transformed businesses worldwide."
+        />
+        <meta
+          name="keywords"
+          content="case studies, blockchain projects, AI solutions, software success stories, ArchiTech Innovate"
+        />
+        <meta property="og:title" content="Case Studies | ArchiTech Innovate" />
+        <meta
+          property="og:description"
+          content="See how ArchiTech Innovate’s technical excellence has empowered startups and enterprises globally."
+        />
+        <meta property="og:url" content="https://architechinnovate.com/#case-studies" />
+        <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
+      </Helmet>
+
       <div className="section-container">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
@@ -199,12 +222,12 @@ const CaseStudies = () => {
 
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-4">
-            Ready to start your own success story?
+            Ready to start your own success story? Let’s make it happen together.
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90">
+          {/* <Button size="lg" className="bg-accent hover:bg-accent/90">
             Schedule a Consultation
             <ExternalLink className="ml-2 h-4 w-4" />
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>

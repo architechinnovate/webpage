@@ -1,5 +1,6 @@
 import { Code, Smartphone, Cloud, Database, Shield, Zap } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Helmet } from "react-helmet-async";
 
 const services = [
   {
@@ -37,6 +38,27 @@ const services = [
 const Services = () => {
   return (
     <section id="services" className="py-24 bg-section-bg">
+
+      {/* tags and keywords for seo */}
+      <Helmet>
+        <title>Services | ArchiTech Innovate</title>
+        <meta
+          name="description"
+          content="Explore ArchiTech Innovate’s software, blockchain, cloud, and AI services crafted for scalability, performance, and business success."
+        />
+        <meta
+          name="keywords"
+          content="software services, blockchain development, AI integration, cloud solutions, ArchiTech Innovate"
+        />
+        <meta property="og:title" content="Services | ArchiTech Innovate" />
+        <meta
+          property="og:description"
+          content="Discover our range of software, AI, and blockchain services that drive modern digital innovation."
+        />
+        <meta property="og:url" content="https://architechinnovate.com/#services" />
+        <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
+      </Helmet>
+
       <div className="section-container">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -29,6 +30,29 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-24 bg-background">
+
+      {/* tags and keywords for seo */}
+
+      <Helmet>
+        <title>Contact Us | ArchiTech Innovate</title>
+        <meta
+          name="description"
+          content="Get in touch with ArchiTech Innovate for collaboration, project discussions, or technical consultation."
+        />
+        <meta
+          name="keywords"
+          content="contact ArchiTech Innovate, software consultation, project collaboration"
+        />
+        <meta property="og:title" content="Contact Us | ArchiTech Innovate" />
+        <meta
+          property="og:description"
+          content="Reach out to ArchiTech Innovate for inquiries, partnerships, or technology solutions."
+        />
+        <meta property="og:url" content="https://architechinnovate.com/#contact" />
+        <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
+      </Helmet>
+
+    
       <div className="section-container">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -140,7 +164,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <Card className="p-6 bg-primary text-primary-foreground border-2 border-primary">
+            {/* <Card className="p-6 bg-primary text-primary-foreground border-2 border-primary">
               <h3 className="text-xl font-bold mb-2">Ready to Transform Your Business?</h3>
               <p className="mb-4 opacity-90">
                 Schedule a free consultation with our experts to discuss your project requirements.
@@ -159,7 +183,7 @@ const Contact = () => {
                   Book a Call
                 </a>
               </Button>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </div>
