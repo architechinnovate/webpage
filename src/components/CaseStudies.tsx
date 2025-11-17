@@ -1,10 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import caseStudies from "@/data";
 
 interface CaseStudy {
   id: number;
@@ -17,67 +17,11 @@ interface CaseStudy {
   image?: string;
 }
 
-const caseStudies: CaseStudy[] = [
-  {
-    id: 1,
-    title: "Enterprise Resource Planning System",
-    client: "Global Manufacturing Corp",
-    description: "Developed a comprehensive ERP solution to streamline operations across 15 international facilities, integrating inventory management, procurement, and financial reporting.",
-    technologies: [".NET Core", "React", "SQL Server", "Azure"],
-    results: [
-      "40% reduction in operational costs",
-      "Real-time data synchronization",
-      "Improved decision-making capabilities"
-    ],
-    category: "Enterprise Web Application",
-  },
-  {
-    id: 2,
-    title: "Healthcare Management Platform",
-    client: "Regional Healthcare Network",
-    description: "Built a HIPAA-compliant patient management system with appointment scheduling, electronic health records, and billing integration for a network of 20+ clinics.",
-    technologies: ["Java", "Angular", "PostgreSQL", "AWS"],
-    results: [
-      "99.9% system uptime",
-      "30% increase in patient satisfaction",
-      "Seamless integration with existing systems"
-    ],
-    category: "Web Development",
-  },
-  {
-    id: 3,
-    title: "Financial Trading Desktop Application",
-    client: "Investment Banking Firm",
-    description: "Created a high-performance Windows desktop application for real-time stock trading with advanced analytics, risk assessment, and portfolio management capabilities.",
-    technologies: ["C#", "WPF", ".NET", "Redis"],
-    results: [
-      "Sub-millisecond trade execution",
-      "Advanced risk analytics",
-      "Secure multi-factor authentication"
-    ],
-    category: "Desktop Application",
-  },
-  {
-    id: 4,
-    title: "Mobile Field Service Application",
-    client: "Utilities Company",
-    description: "Designed and deployed a cross-platform mobile app for field technicians to manage work orders, capture site data, and sync offline operations seamlessly.",
-    technologies: ["React Native", "Node.js", "MongoDB", "AWS"],
-    results: [
-      "50% faster task completion",
-      "Offline-first architecture",
-      "Enhanced customer communication"
-    ],
-    category: "Mobile Development",
-  },
-];
-
 const CaseStudies = () => {
-  const [selectedStudy, setSelectedStudy] = useState<CaseStudy | null>(null);
+  const navigate = useNavigate();
 
   return (
     <section id="case-studies" className="py-20 bg-section-bg">
-
       {/* tags and keywords for seo */}
 
       <Helmet>
@@ -158,63 +102,14 @@ const CaseStudies = () => {
                   </ul>
                 </div>
 
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button 
-                      variant="ghost" 
-                      className="w-full mt-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all"
-                      onClick={() => setSelectedStudy(study)}
-                    >
-                      View Case Study
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
-                    <DialogHeader>
-                      <div className="flex items-start justify-between mb-3">
-                        <Badge variant="secondary" className="bg-accent text-accent-foreground">
-                          {study.category}
-                        </Badge>
-                      </div>
-                      <DialogTitle className="text-3xl">{study.title}</DialogTitle>
-                      <DialogDescription className="text-lg">
-                        <span className="font-semibold text-foreground">Client:</span> {study.client}
-                      </DialogDescription>
-                    </DialogHeader>
-                    
-                    <div className="space-y-6 mt-4">
-                      <div>
-                        <h4 className="font-semibold text-lg mb-2 text-foreground">Project Overview</h4>
-                        <p className="text-muted-foreground leading-relaxed">
-                          {study.description}
-                        </p>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-lg mb-3 text-foreground">Technologies Used</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {study.technologies.map((tech) => (
-                            <Badge key={tech} variant="outline" className="text-sm px-3 py-1">
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-lg mb-3 text-foreground">Key Results & Impact</h4>
-                        <ul className="space-y-2">
-                          {study.results.map((result, idx) => (
-                            <li key={idx} className="text-muted-foreground flex items-start">
-                              <span className="text-accent mr-3 text-xl">✓</span>
-                              <span>{result}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </DialogContent>
-                </Dialog>
+                <Button 
+                  variant="ghost" 
+                  className="w-full mt-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all"
+                  onClick={() => navigate(`/case-study/${study.id}`)}
+                >
+                  View Case Study
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
               </CardContent>
             </Card>
           ))}

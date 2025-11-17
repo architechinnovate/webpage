@@ -14,6 +14,12 @@ const pages = [
   { url: '/case-studies', changefreq: 'monthly', priority: 0.9 },
   { url: '/tech-stack', changefreq: 'monthly', priority: 0.8 },
   { url: '/contact', changefreq: 'monthly', priority: 0.7 },
+
+    // You may choose to include detail pages if IDs are fixed:
+    { url: '/case-study/1', priority: 0.8 },
+    { url: '/case-study/2', priority: 0.8 },
+    { url: '/case-study/3', priority: 0.8 },
+    { url: '/case-study/4', priority: 0.8 },
 ];
 
 // https://vitejs.dev/config/

@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import CaseStudyDetail from "./components/CaseStudiesDetails";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/tech-stack" element={<TechStack />} />
               <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/case-study/:id" element={<CaseStudyDetail />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<Hero />} />
         </Routes>
