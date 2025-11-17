@@ -95,7 +95,7 @@ const CaseStudies = () => {
           property="og:description"
           content="See how ArchiTech Innovate’s technical excellence has empowered startups and enterprises globally."
         />
-        <meta property="og:url" content="https://architechinnovate.com/#case-studies" />
+        <meta property="og:url" content="https://architechinnovate.com/case-studies" />
         <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
       </Helmet>
 

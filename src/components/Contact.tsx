@@ -48,7 +48,7 @@ const Contact = () => {
           property="og:description"
           content="Reach out to ArchiTech Innovate for inquiries, partnerships, or technology solutions."
         />
-        <meta property="og:url" content="https://architechinnovate.com/#contact" />
+        <meta property="og:url" content="https://architechinnovate.com/contact" />
         <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
       </Helmet>
 

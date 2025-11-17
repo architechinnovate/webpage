@@ -61,7 +61,7 @@ const TechStack = () => {
           property="og:description"
           content="Discover the core technologies powering ArchiTech Innovate — from backend and cloud to frontend and smart contract frameworks."
         />
-        <meta property="og:url" content="https://architechinnovate.com/#tech-stack" />
+        <meta property="og:url" content="https://architechinnovate.com/tech-stack" />
         <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Tech Stack | ArchiTech Innovate" />

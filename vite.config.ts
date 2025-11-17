@@ -8,7 +8,13 @@ import fs from "fs";
 const SITE_URL = "https://architechinnovate.com";
 
 // List all the static routes you want crawlers to find
-const pages = [{ url: "/", changefreq: "weekly", priority: 1.0 }];
+const pages = [
+  { url: '/', changefreq: 'weekly', priority: 1.0 },
+  { url: '/services', changefreq: 'monthly', priority: 0.9 },
+  { url: '/case-studies', changefreq: 'monthly', priority: 0.9 },
+  { url: '/tech-stack', changefreq: 'monthly', priority: 0.8 },
+  { url: '/contact', changefreq: 'monthly', priority: 0.7 },
+];
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({

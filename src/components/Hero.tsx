@@ -66,12 +66,12 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="text-lg group" 
-              onClick={() => window.location.href = "/#services"}
+              onClick={() => window.location.href = "/services"}
             >
               Get Started
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="text-lg" onClick={() => window.location.href = "/#case-studies"} >
+            <Button size="lg" variant="outline" className="text-lg" onClick={() => window.location.href = "/case-studies"} >
               View Our Work
             </Button>
           </div>

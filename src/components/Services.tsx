@@ -55,7 +55,7 @@ const Services = () => {
           property="og:description"
           content="Discover our range of software, AI, and blockchain services that drive modern digital innovation."
         />
-        <meta property="og:url" content="https://architechinnovate.com/#services" />
+        <meta property="og:url" content="https://architechinnovate.com/services" />
         <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
       </Helmet>
 

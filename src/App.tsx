@@ -1,8 +1,15 @@
-import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import TechStack from "@/components/TechStack";
+import CaseStudies from "@/components/CaseStudies";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -14,11 +21,17 @@ const App = () => (
       <Toaster />
       <Sonner />
       {/* <BrowserRouter> */}
+      <Navbar />
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+              <Route path="/" element={<Hero />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/tech-stack" element={<TechStack />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<Hero />} />
         </Routes>
+      <Footer />
+
       {/* </BrowserRouter> */}
     </TooltipProvider>
   </QueryClientProvider>
