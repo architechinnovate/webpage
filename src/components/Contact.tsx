@@ -4,10 +4,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { useForm, ValidationError } from '@formspree/react';
+import { useNavigate } from "react-router-dom";
+
 
 const Contact = () => {
+  const navigate = useNavigate();
+  const [state, handleSubmit] = useForm("xjgbvgnn");
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -15,19 +20,32 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
+    // toast({
+    //   title: "Message Sent!",
+    //   description: "We'll get back to you as soon as possible.",
+    // });
+    await handleSubmit(e);
     setFormData({ name: "", email: "", message: "" });
+
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  useEffect(() => {
+    if (state.succeeded) {
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you as soon as possible.",
+      });
+      navigate("/");
+    }
+
+  }, [state.succeeded]);
+  
   return (
     <section id="contact" className="py-24 bg-background">
 
@@ -67,7 +85,7 @@ const Contact = () => {
           <div>
             <Card className="mb-8 border-2">
               <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleFormSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Name
@@ -109,7 +127,7 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full">
+                  <Button type="submit" size="lg" className="w-full" disabled={state.submitting}>
                     Send Message
                   </Button>
                 </form>
