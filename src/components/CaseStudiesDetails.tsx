@@ -33,13 +33,57 @@ const CaseStudyDetail = () => {
     {/* tags for seo */}
 
     <Helmet>
-        <title>{study.title} | Case Study | ArchiTech Innovate</title>
-        <meta name="description" content={study.shortDescription} />
-        <meta property="og:title" content={`${study.title} | Case Study`} />
-        <meta property="og:description" content={study.shortDescription} />
-        <meta property="og:url" content={`https://architechinnovate.com/case-study/${id}`} />
-        {/* <meta property="og:image" content={study.coverImage} /> */}
-    </Helmet>
+    {/* Primary SEO */}
+    <title>{`${study.title} | Case Study | ArchiTech Innovate`}</title>
+    <meta
+      name="description"
+      content={study.shortDescription}
+    />
+    <link
+      rel="canonical"
+      href={`https://architechinnovate.com/case-study/${id}`}
+    />
+
+    {/* Open Graph */}
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ArchiTech Innovate" />
+    <meta
+      property="og:title"
+      content={`${study.title} | Case Study | ArchiTech Innovate`}
+    />
+    <meta
+      property="og:description"
+      content={study.shortDescription}
+    />
+    <meta
+      property="og:url"
+      content={`https://architechinnovate.com/case-study/${id}`}
+    />
+    <meta
+      property="og:image"
+      content={
+        "https://architechinnovate.com/og-image.png"
+      }
+    />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content={`${study.title} | Case Study | ArchiTech Innovate`}
+    />
+    <meta
+      name="twitter:description"
+      content={study.shortDescription}
+    />
+    <meta
+      name="twitter:image"
+      content={
+        "https://architechinnovate.com/og-image.png"
+      }
+    />
+  </Helmet>
+
 
     <div className="min-h-screen">
       

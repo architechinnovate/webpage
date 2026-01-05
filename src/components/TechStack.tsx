@@ -47,30 +47,53 @@ const TechStack = () => {
 
 
       <Helmet>
-        <title>Tech Stack | ArchiTech Innovate</title>
-        <meta
-          name="description"
-          content="Explore the robust tech stack at ArchiTech Innovate — from Go, Node.js, and Python to React, AWS, and blockchain frameworks. We use cutting-edge tools to deliver scalable digital solutions."
-        />
-        <meta
-          name="keywords"
-          content="technology stack, MERN stack, GoLang, Node.js, Python, AWS, blockchain development, cloud architecture, ArchiTech Innovate tech stack"
-        />
-        <meta property="og:title" content="Tech Stack | ArchiTech Innovate" />
-        <meta
-          property="og:description"
-          content="Discover the core technologies powering ArchiTech Innovate — from backend and cloud to frontend and smart contract frameworks."
-        />
-        <meta property="og:url" content="https://architechinnovate.com/tech-stack" />
-        <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tech Stack | ArchiTech Innovate" />
-        <meta
-          name="twitter:description"
-          content="Our versatile tech stack includes Go, Node.js, Python, React, and modern DevOps tools to craft robust and scalable solutions."
-        />
-        <meta name="twitter:image" content="https://architechinnovate.com/og-image.png" />
-      </Helmet>
+      {/* Primary SEO */}
+      <title>Tech Stack | Modern Software, Cloud & Blockchain Technologies | ArchiTech Innovate</title>
+      <meta
+        name="description"
+        content="Explore ArchiTech Innovate’s modern tech stack including Go, Node.js, Python, React, AWS, cloud-native architectures, and blockchain frameworks used to build scalable digital products."
+      />
+      <link
+        rel="canonical"
+        href="https://architechinnovate.com/tech-stack"
+      />
+
+      {/* Open Graph */}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="ArchiTech Innovate" />
+      <meta
+        property="og:title"
+        content="Tech Stack | ArchiTech Innovate"
+      />
+      <meta
+        property="og:description"
+        content="Discover the technologies, frameworks, and cloud platforms powering ArchiTech Innovate’s scalable software and blockchain solutions."
+      />
+      <meta
+        property="og:url"
+        content="https://architechinnovate.com/tech-stack"
+      />
+      <meta
+        property="og:image"
+        content="https://architechinnovate.com/og-image.png"
+      />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="Tech Stack | ArchiTech Innovate"
+      />
+      <meta
+        name="twitter:description"
+        content="Our engineering stack includes Go, Node.js, Python, React, AWS, cloud-native tools, and blockchain frameworks."
+      />
+      <meta
+        name="twitter:image"
+        content="https://architechinnovate.com/og-image.png"
+      />
+    </Helmet>
+
 
       
       <div className="section-container">

@@ -9,23 +9,53 @@ const Hero = () => {
       
       {/* for tags and keywords */}
       <Helmet>
-        <title>ArchiTech Innovate – Building Excellence Through Code Mastery</title>
-        <meta
-          name="description"
-          content="ArchiTech Innovate delivers robust, scalable software, blockchain, and AI solutions built on clean architecture and lasting quality."
-        />
-        <meta
-          name="keywords"
-          content="software development, blockchain, AI solutions, web development, ArchiTech Innovate"
-        />
-        <meta property="og:title" content="ArchiTech Innovate – Building Excellence Through Code Mastery" />
-        <meta
-          property="og:description"
-          content="Empowering businesses with next-gen digital transformation through clean code and technical mastery."
-        />
-        <meta property="og:url" content="https://architechinnovate.com" />
-        <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
-      </Helmet>
+      {/* Primary SEO */}
+      <title>ArchiTech Innovate | Software, Blockchain & AI Development Company</title>
+      <meta
+        name="description"
+        content="ArchiTech Innovate is a technology company specializing in scalable software development, blockchain solutions, and AI-driven platforms built with clean architecture and long-term performance."
+      />
+      <link
+        rel="canonical"
+        href="https://architechinnovate.com/"
+      />
+
+      {/* Open Graph */}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="ArchiTech Innovate" />
+      <meta
+        property="og:title"
+        content="ArchiTech Innovate | Software, Blockchain & AI Development"
+      />
+      <meta
+        property="og:description"
+        content="We help startups and enterprises build scalable software, blockchain systems, and AI-powered products with engineering excellence."
+      />
+      <meta
+        property="og:url"
+        content="https://architechinnovate.com/"
+      />
+      <meta
+        property="og:image"
+        content="https://architechinnovate.com/og-image.png"
+      />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="ArchiTech Innovate | Software, Blockchain & AI Experts"
+      />
+      <meta
+        name="twitter:description"
+        content="Building scalable software, blockchain, and AI solutions with clean architecture and proven engineering practices."
+      />
+      <meta
+        name="twitter:image"
+        content="https://architechinnovate.com/og-image.png"
+      />
+    </Helmet>
+
 
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">

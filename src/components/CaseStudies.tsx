@@ -25,23 +25,47 @@ const CaseStudies = () => {
       {/* tags and keywords for seo */}
 
       <Helmet>
-        <title>Case Studies | ArchiTech Innovate</title>
-        <meta
-          name="description"
-          content="Explore ArchiTech Innovate’s success stories in blockchain, web apps, and AI-driven platforms that transformed businesses worldwide."
-        />
-        <meta
-          name="keywords"
-          content="case studies, blockchain projects, AI solutions, software success stories, ArchiTech Innovate"
-        />
-        <meta property="og:title" content="Case Studies | ArchiTech Innovate" />
-        <meta
-          property="og:description"
-          content="See how ArchiTech Innovate’s technical excellence has empowered startups and enterprises globally."
-        />
-        <meta property="og:url" content="https://architechinnovate.com/case-studies" />
-        <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
-      </Helmet>
+      {/* Primary SEO */}
+      <title>Case Studies | Blockchain, Web & AI Projects | ArchiTech Innovate</title>
+      <meta
+        name="description"
+        content="Explore real-world case studies by ArchiTech Innovate showcasing blockchain solutions, scalable web applications, and AI-driven platforms that delivered measurable business impact."
+      />
+      <link
+        rel="canonical"
+        href="https://architechinnovate.com/case-studies"
+      />
+
+      {/* Open Graph */}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="ArchiTech Innovate" />
+      <meta property="og:title" content="Case Studies | ArchiTech Innovate" />
+      <meta
+        property="og:description"
+        content="Discover how ArchiTech Innovate helps startups and enterprises succeed through blockchain, AI, and modern web technologies."
+      />
+      <meta
+        property="og:url"
+        content="https://architechinnovate.com/case-studies"
+      />
+      <meta
+        property="og:image"
+        content="https://architechinnovate.com/og-image.png"
+      />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Case Studies | ArchiTech Innovate" />
+      <meta
+        name="twitter:description"
+        content="Real success stories of blockchain, AI, and web development projects delivered by ArchiTech Innovate."
+      />
+      <meta
+        name="twitter:image"
+        content="https://architechinnovate.com/og-image.png"
+      />
+    </Helmet>
+
 
       <div className="section-container">
         <div className="text-center mb-16 animate-fade-in-up">

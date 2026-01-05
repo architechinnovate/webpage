@@ -41,23 +41,53 @@ const Services = () => {
 
       {/* tags and keywords for seo */}
       <Helmet>
-        <title>Services | ArchiTech Innovate</title>
-        <meta
-          name="description"
-          content="Explore ArchiTech Innovate’s software, blockchain, cloud, and AI services crafted for scalability, performance, and business success."
-        />
-        <meta
-          name="keywords"
-          content="software services, blockchain development, AI integration, cloud solutions, ArchiTech Innovate"
-        />
-        <meta property="og:title" content="Services | ArchiTech Innovate" />
-        <meta
-          property="og:description"
-          content="Discover our range of software, AI, and blockchain services that drive modern digital innovation."
-        />
-        <meta property="og:url" content="https://architechinnovate.com/services" />
-        <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
-      </Helmet>
+      {/* Primary SEO */}
+      <title>Services | Software, Blockchain & AI Development | ArchiTech Innovate</title>
+      <meta
+        name="description"
+        content="ArchiTech Innovate offers end-to-end software development, blockchain solutions, cloud architecture, and AI integration services designed for scalable and secure digital products."
+      />
+      <link
+        rel="canonical"
+        href="https://architechinnovate.com/services"
+      />
+
+      {/* Open Graph */}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="ArchiTech Innovate" />
+      <meta
+        property="og:title"
+        content="Software, Blockchain & AI Services | ArchiTech Innovate"
+      />
+      <meta
+        property="og:description"
+        content="Explore enterprise-grade software, blockchain, cloud, and AI services delivered by ArchiTech Innovate for startups and growing businesses."
+      />
+      <meta
+        property="og:url"
+        content="https://architechinnovate.com/services"
+      />
+      <meta
+        property="og:image"
+        content="https://architechinnovate.com/og-image.png"
+      />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="Software, Blockchain & AI Services | ArchiTech Innovate"
+      />
+      <meta
+        name="twitter:description"
+        content="End-to-end software development, blockchain engineering, cloud solutions, and AI integration services."
+      />
+      <meta
+        name="twitter:image"
+        content="https://architechinnovate.com/og-image.png"
+      />
+    </Helmet>
+
 
       <div className="section-container">
         <div className="text-center mb-16 animate-fade-in-up">

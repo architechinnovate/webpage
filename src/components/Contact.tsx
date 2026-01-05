@@ -52,25 +52,47 @@ const Contact = () => {
       {/* tags and keywords for seo */}
 
       <Helmet>
-        <title>Contact Us | ArchiTech Innovate</title>
-        <meta
-          name="description"
-          content="Get in touch with ArchiTech Innovate for collaboration, project discussions, or technical consultation."
-        />
-        <meta
-          name="keywords"
-          content="contact ArchiTech Innovate, software consultation, project collaboration"
-        />
-        <meta property="og:title" content="Contact Us | ArchiTech Innovate" />
-        <meta
-          property="og:description"
-          content="Reach out to ArchiTech Innovate for inquiries, partnerships, or technology solutions."
-        />
-        <meta property="og:url" content="https://architechinnovate.com/contact" />
-        <meta property="og:image" content="https://architechinnovate.com/og-image.png" />
-      </Helmet>
+      {/* Primary SEO */}
+      <title>Contact Us | Software, Blockchain & AI Consultation | ArchiTech Innovate</title>
+      <meta
+        name="description"
+        content="Contact ArchiTech Innovate to discuss software development, blockchain solutions, AI platforms, or to start your next digital project with expert guidance."
+      />
+      <link
+        rel="canonical"
+        href="https://architechinnovate.com/contact"
+      />
 
-    
+      {/* Open Graph */}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="ArchiTech Innovate" />
+      <meta property="og:title" content="Contact Us | ArchiTech Innovate" />
+      <meta
+        property="og:description"
+        content="Get in touch with ArchiTech Innovate for project inquiries, partnerships, or professional software consultation."
+      />
+      <meta
+        property="og:url"
+        content="https://architechinnovate.com/contact"
+      />
+      <meta
+        property="og:image"
+        content="https://architechinnovate.com/og-image.png"
+      />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Contact Us | ArchiTech Innovate" />
+      <meta
+        name="twitter:description"
+        content="Reach out to ArchiTech Innovate for blockchain, AI, and modern software development services."
+      />
+      <meta
+        name="twitter:image"
+        content="https://architechinnovate.com/og-image.png"
+      />
+    </Helmet>
+
       <div className="section-container">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
